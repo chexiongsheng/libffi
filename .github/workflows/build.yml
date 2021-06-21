@@ -13,7 +13,7 @@ jobs:
       uses: egor-tensin/setup-cygwin@v3
       with:
         platform: x64
-        packages: 'cmake base-devel'
-    - shell: msys2 {0}
+        packages: 'cmake make automake gcc gcc-c++'
+    - name: Run build script
       run: |
         C:\tools\cygwin\bin\sh -lc "(./autogen.sh)"
