@@ -19,5 +19,6 @@ jobs:
         echo "\"mingw32-make\" \"\$@\"" >> /mingw64/bin/make
     - shell: msys2 {0}
       run: |
+        ./autogen.sh
         ./configure CC="msvcc.sh -m64" CXX="msvcc.sh -m64" LD=link CPP="cl -nologo -EP" CPPFLAGS="-DFFI_BUILDING_DLL"
         make
