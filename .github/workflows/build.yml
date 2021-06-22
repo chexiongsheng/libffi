@@ -7,6 +7,9 @@ jobs:
   build_window_dll:
     name: Windows
     runs-on: windows-2019
+    defaults:
+      run:
+        shell: C:\tools\cygwin\bin\bash.exe --login -o igncr '{0}'
     steps:
     - uses: actions/checkout@v2
     - name: Set up Cygwin
@@ -16,4 +19,4 @@ jobs:
         packages: 'cmake make automake gcc gcc-c++'
     - name: Run build script
       run: |
-        C:\tools\cygwin\bin\sh -lc "(cd $GITHUB_WORKSPACE; ls; $GITHUB_WORKSPACE/autogen.sh)"
+        ./autogen.sh
