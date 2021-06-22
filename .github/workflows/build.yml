@@ -16,4 +16,4 @@ jobs:
         packages: 'cmake make automake gcc gcc-c++'
     - name: Run build script
       run: |
-        C:\tools\cygwin\bin\sh -lc "(./autogen.sh)"
+        C:\tools\cygwin\bin\sh -lc "(cd $GITHUB_WORKSPACE; ls; ./autogen.sh)"
