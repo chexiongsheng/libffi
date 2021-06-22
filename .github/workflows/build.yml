@@ -20,4 +20,4 @@ jobs:
     - name: Run build script
       run: |
         cd ${{env.GITHUB_WORKSPACE}}
-        ./autogen.sh
+        ${{env.GITHUB_WORKSPACE}}/autogen.sh
