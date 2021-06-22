@@ -19,5 +19,5 @@ jobs:
         packages: 'cmake make automake gcc gcc-c++'
     - name: Run build script
       run: |
-        pwd
-        ls
+        cd ${{GITHUB_WORKSPACE}}
+        ./autogen.sh
