@@ -23,9 +23,9 @@ jobs:
         ./configure --enable-static --disable-shared
         make
         mkdir -p Dist/Include/ffi/Win64/
-        find . -name ffi.h
+        cp x86_64-w64-mingw32/include/ffi.h Dist/Include/ffi/Win64/
         cp src/x86/ffitarget.h Dist/Include/ffi/Win64/
-        mkdir Dist/Library/ffi/Win64
+        mkdir -p Dist/Library/ffi/Win64
         cp .libs/libffi.a Dist/Library/ffi/Win64/ 
     - uses: actions/upload-artifact@v2
       with:
