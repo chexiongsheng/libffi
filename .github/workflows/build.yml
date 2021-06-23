@@ -23,7 +23,7 @@ jobs:
         ./configure --enable-static --disable-shared
         make
         mkdir -p Dist/Include/ffi/Win64/
-        cp include/ffi.h Dist/Include/ffi/Win64/
+        find . -name ffi.h
         cp src/x86/ffitarget.h Dist/Include/ffi/Win64/
         mkdir Dist/Library/ffi/Win64
         cp .libs/libffi.a Dist/Library/ffi/Win64/ 
